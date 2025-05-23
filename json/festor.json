@@ -1,0 +1,9 @@
+{
+    "name": "Festor",
+    "structure": 4,
+    "stress": 4,
+    "current_hp": 9,
+    "current_heat": 0,
+    "max_hp": 9,
+    "max_heat": 7
+}
