@@ -56,11 +56,11 @@ def atualizar_imagem_mech():
 
 def atualizar_imagem_char():
     positions = [
-        (665, 32),  # Centro
-        (508, 359), # Esquerda
-        (825, 359), # Meio-esquerda
-        (508, 687), # Meio-direita
-        (825, 687)  # Direita
+        (670, 32),  # Centro
+        (513, 359), # Esquerda
+        (830, 359), # Meio-esquerda
+        (513, 687), # Meio-direita
+        (830, 687)  # Direita
     ]
 
     # Nome dos arquivos JSON (em ordem)
@@ -84,7 +84,7 @@ def atualizar_imagem_char():
         x, y = positions[idx]
 
         draw.text((x + 50, y), f"{data['char_current_hp']}", fill="white", font=font, anchor="rm", outline_width=2)
-        draw.text((x + 80, y), f"{data['char_max_hp']}", fill="white", font=font, anchor="lm", outline_width=2)
+        draw.text((x + 66, y), f"{data['char_max_hp']}", fill="white", font=font, anchor="lm", outline_width=2)
 
     # Salva a imagem final
     bg.save("hp_atualizado.png")

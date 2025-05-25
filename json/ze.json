@@ -1,11 +1,10 @@
 {
-    "name": "Zé",
-    "structure": 4,
-    "stress": 4,
     "current_hp": 11,
     "current_heat": 0,
+    "structure": 4,
+    "stress": 4,
     "max_hp": 11,
     "max_heat": 6,
-    "char_current_hp": 7,
-    "char_max_hp": 7
+    "char_current_hp": 10,
+    "char_max_hp": 10
 }
