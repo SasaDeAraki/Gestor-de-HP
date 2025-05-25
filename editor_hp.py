@@ -2,12 +2,12 @@ import tkinter as tk
 from tkinter import ttk
 import json
 import os
-from gestor_hp import atualizar_imagem
+from gestor_hp import atualizar_imagem_mech, atualizar_imagem_char
 
 # Caminho para os JSONs
 JSON_DIR = os.path.join(os.getcwd(), "json")
 PERSONAGENS = ["trex", "buzz", "ze", "festor", "renna"]
-CAMPOS = ["current_hp", "current_heat", "structure", "stress", "max_hp", "max_heat"]
+CAMPOS = ["current_hp", "current_heat", "structure", "stress", "max_hp", "max_heat", "char_current_hp", "char_max_hp"]
 
 class EditorHP(tk.Tk):
     def __init__(self):
@@ -48,7 +48,8 @@ class EditorHP(tk.Tk):
             with open(json_path, "w", encoding="utf-8") as f:
                 json.dump(novo_dado, f, indent=4, ensure_ascii=False)
             print(f"{nome_personagem}.json salvo com sucesso!")
-            atualizar_imagem()
+            atualizar_imagem_mech()
+            atualizar_imagem_char()
 
         botao_salvar = ttk.Button(frame, text="Salvar", command=salvar)
         botao_salvar.grid(row=len(CAMPOS), column=0, columnspan=2, pady=10)
